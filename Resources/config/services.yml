@@ -3,6 +3,6 @@ services:
         class: Oh\EmojiBundle\Service\EmojiConverter
     emoji.twig.extension:
         class: Oh\EmojiBundle\Extension\EmojiExtension
-        arguments: [@emoji.converter]
+        arguments: ["@emoji.converter"]
         tags:
             -  { name: twig.extension }
