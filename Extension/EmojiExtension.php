@@ -16,8 +16,8 @@ class EmojiExtension extends \Twig_Extension
 
     public function getFilters() {
         return array(
-            'iphone_emoji' => new \Twig_Filter_Method($this, 'iPhoneToHtml'),
-            'google_emoji' => new \Twig_Filter_Method($this, 'googleToHtml'),
+            new \Twig_SimpleFilter('iphone_emoji', array($this, 'iPhoneToHtml')),
+            new \Twig_SimpleFilter('google_emoji', array($this, 'googleToHtml')),
         );
     }
 
